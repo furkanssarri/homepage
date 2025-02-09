@@ -14,7 +14,19 @@ body {
    flex-direction: column;
 }
 
-header {
+header::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 120%;
+   background-color: #0891B2;
+   clip-path: polygon(0% 0%, 100% 0%, 100% 18%, 0% 44%);
+   z-index: -1;
+}
+
+header .landing {
    display: flex;
    flex-direction: column;
    margin-top: 1rem;
@@ -25,7 +37,7 @@ header {
 }
 
 
-header .landing-image {
+header .landing .landing-image {
    margin: 3rem calc(1.5rem + 1vw);
    /* padding: 3rem; */
    display: flex;
@@ -34,19 +46,39 @@ header .landing-image {
 }
 
 
-header .landing-about {
+header .landing .landing-about {
    padding: 1rem 5rem;
    line-height: 1.5;
    text-align: center;
+   background-color: #fff;
 }
 
-header .landing-about h2 {
+header .landing .landing-about h2 {
    font-size: calc(3rem + 1vw);
 }
 
-header .landing-about p {
+header .landing .landing-about p {
    font-size: calc(1rem + 2vw);
    color: #545c5e;
+}
+
+.contact-icons {
+   justify-content: center;
+   display: flex;
+   gap: 1rem;
+}
+
+.contact-icons i {
+   margin-top: calc(1.5rem + 1vw);
+   font-size: calc(2.5rem + 2vw);
+}
+
+.contact-icons a {
+   transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+   transform: scale(1.1);
 }
 
 main {
@@ -83,7 +115,7 @@ main .projects h2 {
 }
 
 .project-item:hover {
-   transform: scale(1.050);
+   transform: scale(1.1);
 }
 
 .project-item img {
@@ -101,9 +133,9 @@ main .projects h2 {
 }
 
 .shadowed-box {
-   -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
-   -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
-   box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
+   -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+   -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 .radius-5 {
@@ -117,7 +149,7 @@ footer {
    color: #def0f5;
    flex-direction: column;
    justify-content: center;
-   padding: calc(1rem + 1vw);
+   /* padding: calc(1rem + 1vw); */
 }
 
 footer .footer-wrapper {
@@ -165,32 +197,51 @@ footer .footer-image img {
 @media (min-width: 1315px) {
 
    header {
-      flex-direction: row;
       padding: 2rem;
    }
 
-   header .landing-image {
+   header::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 38%, 0% 83%);
+   }
+
+   header .landing {
+      flex-direction: row;
+   }
+
+   header .landing .landing-image {
       margin-right: 0;
       max-height: 80%;
    }
 
-   header .landing-about {
-      padding: calc(1rem + 1vw);
+   header .landing .landing-about {
+      padding: calc(3rem + 2vw);
       margin-right: 2rem;
       line-height: 1.5;
       text-align: center;
       max-width: 55%;
       max-height: fit-content;
+      -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
       border: 1px solid sandybrown;
    }
 
-   header .landing-about h2 {
+   header .landing .landing-about h2 {
       font-size: 2.5rem;
    }
 
-   header .landing-about p {
+   header .landing .landing-about p {
       font-size: 1.5rem;
       color: #545c5e;
+   }
+
+   header .landing .landing-about .contact-icons {
+      justify-content: end;
+      gap: 2rem;
+   }
+
+   header .landing .landing-about .contact-icons i {
+      font-size: calc(1.5rem + 2vw);
    }
 
    .container {
@@ -223,5 +274,28 @@ footer .footer-image img {
 
       margin: calc(1rem + 1vw);
       padding: calc(1rem + 1vw);
+   }
+}
+
+
+@media (min-width: 2000px) {
+
+   header {
+      padding: calc(3rem + 3vw);
+   }
+
+   header::before {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 18%, 0% 65%);
+   }
+
+   header .landing {
+      padding-top: calc(3rem + 2vw);
+      transform: scale(1.2);
+   }
+
+   .container {
+      gap: calc(2.5rem + 3vw);
+      padding: 5rem calc(4rem + 4vw);
+      margin: 0 calc(4rem + 4vw);
    }
 }
