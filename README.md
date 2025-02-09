@@ -12,4 +12,4 @@ a basic homepage implementation in conjunction with [the odin project](https://w
 
 ### live demo
 
-the demo will be made available soon™
+click [here](https://furkanssarri.github.io/homepage/) for the live demo.
