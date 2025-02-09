@@ -115,7 +115,7 @@ main .projects h2 {
 }
 
 .project-item:hover {
-   transform: scale(1.1);
+   transform: scale(1.050);
 }
 
 .project-item img {
