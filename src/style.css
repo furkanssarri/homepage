@@ -26,7 +26,7 @@ header {
 
 
 header .landing-image {
-   margin: 3rem 5rem;
+   margin: 3rem calc(1.5rem + 1vw);
    /* padding: 3rem; */
    display: flex;
    justify-content: center;
@@ -36,54 +36,134 @@ header .landing-image {
 
 header .landing-about {
    padding: 1rem 5rem;
-   font-size: 2rem;
    line-height: 1.5;
    text-align: center;
 }
 
 header .landing-about h2 {
-   font-size: 3.5rem;
+   font-size: calc(3rem + 1vw);
+}
+
+header .landing-about p {
+   font-size: calc(1rem + 2vw);
+   color: #545c5e;
+}
+
+main {
+   margin: calc(1rem + 1vw);
+   padding: calc(1rem + 1vw);
 }
 
 main .projects {
    text-align: center;
 }
 
+main .projects h2 {
+   font-size: calc(1.5rem + 0.5vw);
+}
+
 .container {
-   margin: 4rem;
-   padding: 4rem;
+   margin: calc(.5rem + .5vw);
+   padding: calc(.5rem + .5vw);
    display: flex;
    flex-wrap: wrap;
-   gap: 5rem;
+   gap: 3rem;
 }
 
 .project-item {
    display: flex;
    flex-direction: column;
-   padding-bottom: 2rem;
-   margin: 2rem 0;
-   min-width: 400px;
+   padding-bottom: calc(1rem + 0.5vw);
+   margin: calc(1rem + 1vw) 0;
+   min-width: 300px;
+   max-width: 100%;
    flex: 1 1 300px;
    max-width: 100%;
+   transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+   transform: scale(1.050);
 }
 
 .project-item img {
-   margin-bottom: 1rem;
+   margin-bottom: calc(0.5rem + 0.5vw);
 }
 
 .project-description {
-   margin: 1.3rem;
+   margin: calc(1rem + 0.5);
+   padding: calc(1rem + 0.5vw);
    text-align: start;
 }
 
 .project-description h4 {
-   margin: 0.5rem;
-   padding: 0.5rem;
-   font-size: 2rem;
+   font-size: calc(1.5rem + 0.5vw);
 }
 
 .shadowed-box {
    -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
    -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+footer {
+   background-color: #0891B2;
+   color: #def0f5;
+   min-height: calc(95vh + 2rem);
+   font-size: calc(1.3rem + 1vw);
+   line-height: 1.5;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+
+footer h3 {
+   font-size: calc(2rem + 1vw);
+   margin-bottom: calc(1rem + 1vw);
+   text-align: center;
+}
+
+footer .contact-area {
+   padding: calc(2rem + 1vw);
+}
+
+footer .contact-area .address {
+   padding: calc(.5rem + .5vw) 0;
+   margin: calc(.5rem + .5vw) 0;
+}
+
+footer .contact-area .contact-info {
+   padding: calc(.5rem + .5vw);
+   margin: calc(.5rem + .5vw) 0;
+}
+
+footer .contact-area .social-media {
+   padding: calc(.5rem + .5vw);
+   margin: calc(.5rem + .5vw) 0;
+}
+
+footer .footer-image img {
+   display: block;
+   margin: 0;
+   width: 100%;
+}
+
+
+
+@media (min-width: 1315px) {
+
+   .container {
+      padding: calc(3rem + 3vw);
+      margin: calc(3rem + 3vw);
+   }
+
+   .project-item {
+      min-width: 350px;
+   }
+
+
+   footer {
+      padding: calc(1rem + .5vw);
+   }
 }
