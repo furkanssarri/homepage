@@ -106,10 +106,21 @@ main .projects h2 {
    box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.5);
 }
 
+.radius-5 {
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
 
 footer {
    background-color: #0891B2;
    color: #def0f5;
+   flex-direction: column;
+   justify-content: center;
+   padding: calc(1rem + 1vw);
+}
+
+footer .footer-wrapper {
    min-height: calc(95vh + 2rem);
    font-size: calc(1.3rem + 1vw);
    line-height: 1.5;
@@ -153,9 +164,38 @@ footer .footer-image img {
 
 @media (min-width: 1315px) {
 
+   header {
+      flex-direction: row;
+      padding: 2rem;
+   }
+
+   header .landing-image {
+      margin-right: 0;
+      max-height: 80%;
+   }
+
+   header .landing-about {
+      padding: calc(1rem + 1vw);
+      margin-right: 2rem;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 55%;
+      max-height: fit-content;
+      border: 1px solid sandybrown;
+   }
+
+   header .landing-about h2 {
+      font-size: 2.5rem;
+   }
+
+   header .landing-about p {
+      font-size: 1.5rem;
+      color: #545c5e;
+   }
+
    .container {
-      padding: calc(3rem + 3vw);
-      margin: calc(3rem + 3vw);
+      padding: 0 calc(2.5rem + 3vw);
+      margin: 0 calc(2.5rem + 3vw);
    }
 
    .project-item {
@@ -163,7 +203,25 @@ footer .footer-image img {
    }
 
 
-   footer {
+   footer h3 {
+      text-align: left;
+   }
+
+   footer .footer-wrapper {
+      height: 100%;
       padding: calc(1rem + .5vw);
+      flex-direction: row;
+      justify-content: space-between !important;
+   }
+
+   footer .contact-area {
+      flex-grow: 1;
+   }
+
+   footer .footer-image {
+      margin-left: calc(2rem + 1vw);
+
+      margin: calc(1rem + 1vw);
+      padding: calc(1rem + 1vw);
    }
 }
