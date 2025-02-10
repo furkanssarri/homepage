@@ -9,9 +9,37 @@
 body {
    background-color: aliceblue;
    font-size: 16px;
-   font-family: roboto-main;
+   font-family: roboto-main, sans-serif;
    display: flex;
    flex-direction: column;
+}
+
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
+}
+
+div:focus-visible,
+span:focus-visible,
+h1:focus-visible,
+h2:focus-visible,
+h3:focus-visible,
+h4:focus-visible,
+h5:focus-visible,
+h6:focus-visible,
+p:focus-visible,
+i:focus-visible,
+a:focus-visible,
+img:focus-visible {
+   outline: 2px solid rgb(54, 118, 227);
+   border-radius: 3px;
 }
 
 header::before {
@@ -26,7 +54,7 @@ header::before {
    z-index: -1;
 }
 
-header .landing {
+header .hero {
    display: flex;
    flex-direction: column;
    margin-top: 1rem;
@@ -37,7 +65,7 @@ header .landing {
 }
 
 
-header .landing .landing-image {
+header .hero .hero-image {
    margin: 3rem calc(1.5rem + 1vw);
    /* padding: 3rem; */
    display: flex;
@@ -46,18 +74,18 @@ header .landing .landing-image {
 }
 
 
-header .landing .landing-about {
+header .hero .hero-about {
    padding: 1rem 5rem;
    line-height: 1.5;
    text-align: center;
    background-color: #fff;
 }
 
-header .landing .landing-about h2 {
+header .hero .hero-about h1 {
    font-size: calc(3rem + 1vw);
 }
 
-header .landing .landing-about p {
+header .hero .hero-about p {
    font-size: calc(1rem + 2vw);
    color: #545c5e;
 }
@@ -198,17 +226,17 @@ footer .footer-image img {
       z-index: 1;
    }
 
-   header .landing {
+   header .hero {
       flex-direction: row;
    }
 
-   header .landing .landing-image {
+   header .hero .hero-image {
       margin-right: 0;
       max-height: 80%;
       z-index: 3;
    }
 
-   header .landing .landing-about {
+   header .hero .hero-about {
       padding: 1rem;
       margin-right: 2rem;
       line-height: 1.5;
@@ -221,11 +249,11 @@ footer .footer-image img {
       border-bottom-left-radius: 0;
    }
 
-   header .landing .landing-about h2 {
+   header .hero .hero-about h2 {
       font-size: 1.7rem;
    }
 
-   header .landing .landing-about p {
+   header .hero .hero-about p {
       font-size: calc(.6rem + .5vw);
    }
 }
@@ -242,21 +270,21 @@ footer .footer-image img {
    }
 
 
-   header .landing .landing-about h2 {
+   header .hero .hero-about h2 {
       font-size: calc(1.7rem + 1.2vw);
    }
 
-   header .landing .landing-about p {
+   header .hero .hero-about p {
       font-size: calc(.8rem + 1vw);
    }
 
 
-   header .landing .landing-about .contact-icons {
+   header .hero .hero-about .contact-icons {
       justify-content: end;
       gap: 2rem;
    }
 
-   header .landing .landing-about .contact-icons i {
+   header .hero .hero-about .contact-icons i {
       font-size: calc(1.5rem + 2vw);
    }
 
@@ -304,7 +332,7 @@ footer .footer-image img {
       clip-path: polygon(0% 0%, 100% 0%, 100% 18%, 0% 65%);
    }
 
-   header .landing {
+   header .hero {
       padding-top: calc(3rem + 2vw);
       transform: scale(1.2);
    }
