@@ -1,0 +1,2 @@
+(()=>{"use strict";const t=window.matchMedia("(min-width: 768px)");function e(t){const e=document.querySelector("#footerPhoto");e&&e.classList.toggle("radius-5",t.matches)}t.addEventListener("change",e),e(t)})();
+//# sourceMappingURL=main.bundle.js.map
